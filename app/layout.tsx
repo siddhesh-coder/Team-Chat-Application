@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 import { ThemeProvider } from '@/components/providers/theme-provider'
+import { ModalProvider } from '@/components/providers/modal-provider'
 import { cn } from '@/lib/utils'
 
 
@@ -30,6 +31,7 @@ export default function RootLayout({
              defaultTheme='dark'
              enableSystem={false}
              storageKey='team-chat-theme'>
+              <ModalProvider/>
           {children}
           </ThemeProvider>
         </body>
